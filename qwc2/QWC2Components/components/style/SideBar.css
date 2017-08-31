@@ -1,0 +1,64 @@
+div.sidebar {
+    position: absolute;
+    top: calc(2.5em + 6px);
+    /* bottombar is high 3em at 75% font size, hence at 100% font size it is 0.75 * 3em = 2.25em */
+    max-height: calc(100% - 2.5em - 10px);
+    background-color: @dialog_bg@;
+    transition: right 0.25s;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+}
+
+div.sidebar div.sidebar-titlebar {
+    display: block;
+    color: #fff;
+    font-weight: 700;
+    background-image: radial-gradient(#666, #888);
+    border-bottom: 2px solid #fff;
+    border-left-style: none;
+    border-right-style: none;
+    border-top-style: none;
+    height: 28.35px;
+    letter-spacing: 0;
+    padding-bottom: 0;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0;
+    background-repeat: repeat-x;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-image-outset: 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: transparent;
+    border-left-width: 1px;
+    border-right-color: transparent;
+    border-right-width: 1px;
+    border-top-color: transparent;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-top-width: 1px;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    width: 100%;
+}
+
+div.sidebar div.sidebar-body {
+    max-height: calc(100% - 3.5em - 13px); /* viewport - topbar - bottombar - sidebar_titlebar*/
+    flex: 1 1 auto;
+    overflow-x: auto;
+}
+
+.sidebar-titlebar-icon {
+    margin-right: 5px !important;
+}
