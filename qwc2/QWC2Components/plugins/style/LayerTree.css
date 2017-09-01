@@ -61,7 +61,7 @@
     margin-left: 1em;
     cursor: pointer;
     border: 1px solid transparent;
-    padding: 0.25em;
+    vertical-align: middle;
 }
 
 #LayerTree span.layertree-print-legend:hover {
@@ -69,20 +69,15 @@
 }
 
 #LayerTree.showmaptips div.sidebar-body {
-    margin-bottom: 28.35px;
+    margin-bottom: 23.35px;
 }
 
 #LayerTree div.layertree-tree div.layertree-item-container:first-child {
-    padding-bottom: 0.5em;
+    padding-bottom: 4px;
+    padding-top: 2px;
 }
 
-#LayerTree div.layertree-item-container div.layertree-item-container:first-child {
-    border-top-left-radius: 6px;
-}
 
-#LayerTree div.layertree-item-container > div.layertree-item-container:first-child {
-    border-top-left-radius: 6px;
-}
 
 #LayerTree div.laytree-maptip-option {
     position: absolute;
@@ -90,7 +85,7 @@
     right: 0;
     bottom: 0;
     height: 28.35px;
-    padding: 0.25em 0.5em 0.25em 0.5em;
+    padding: 0.2em 0.5em 0.2em 0.5em;
     border-top: 2px solid #fff;
     background-image: radial-gradient(#666, #888);
     color: #fff;
@@ -104,29 +99,45 @@
 #LayerTree div.layertree-item-container {
     background-image: radial-gradient(#fff, #888);
     background-size: 100% 100%;
-    padding-right: 0.5em;
-    padding-left: 0.5em;
+    white-space: nowrap;
+    line-height: 1.6;
 }
 
 #LayerTree div.layertree-item-container:first-child {
-    padding-right: 0.5em;
-    padding-left: 0.5em;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+#LayerTree div.layertree-item-container > div.layertree-item-container:last-child {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.02);
+}
+
+#LayerTree div.layertree-item-container ~ div.layertree-item-container {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-top-style: none !important;
 }
 
 #LayerTree div.layertree-item-container > div.layertree-item-container {
-    background-color: rgba(100%, 100%, 100%, 0.2);
+    background-color: rgba(255, 255, 255, 0.16);
     background-image: none !important;
     background-size: 100% 42.5667px;
-}
-
-
-
-#LayerTree div.layertree-item-container > div {
-
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-top: 6px solid rgba(0, 0, 0, 0.02);
+    border-left: 6px solid rgba(0, 0, 0, 0.02);
+    border-right: 6px solid rgba(0, 0, 0, 0.02);
 }
 
 #LayerTree div.layertree-item-container > div:last-child {
-    padding-bottom: 0.8em;
+
+}
+
+
+#LayerTree div.layertree-item-container:last-child > div.layertree-item-container:last-child {
+    padding-bottom: 0;
 }
 
 
@@ -137,8 +148,8 @@
     margin-top: 0;
     color: #000;
     opacity: 0.8;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
     position: relative;
 }
 
@@ -150,7 +161,7 @@
     margin-left: -5px;
     position: absolute;
     z-index: 100;
-    top: 30%;
+    top: 0;
     background-repeat: no-repeat;
 }
 
@@ -220,13 +231,17 @@ img.layertree-item-legend-tooltip {
 }
 
 #LayerTree span.layertree-item-cog {
-    line-height: 2em;
-    text-align: center;
-    width: 2em;
+    line-height: 1;
     cursor: pointer;
-    color: @item_border@;
-    flex: 0 0 auto;
-    margin-left: 0.25em;
+    color: #555;
+    float: right;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 3px;
+    padding: 0;
+    position: relative;
+    top: -16px;
 }
 
 #LayerTree span.layertree-item-cog-active {
